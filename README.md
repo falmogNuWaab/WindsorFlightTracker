@@ -1,6 +1,6 @@
 # WindsorFlightTracker
 ## Description:
-A small MVC Project with a C# backend and ASP .Net 3.1/HTML/Javascript front-end. This project was started to provide the Windsor Air Cadets a way to monitor Air Traffic over Windsor Ontario and Detroit Michigan. This application pulls flight data from Opensky-Network anonymously and places corresponding markers on a map. I am using LeafletJS & Mapbox for the map and map functionality. I am also using Newtonsoft.Json to deserialize the response from OpenSky.
+A small MVC Project with a C# backend and ASP .Net MVC (Asp .Net 3.1) front-end. This project was started to provide the Windsor Air Cadets a way to monitor Air Traffic over Windsor Ontario and Detroit Michigan. This application pulls flight data from Opensky-Network anonymously and places corresponding markers on a map. I am using LeafletJS & Mapbox for the map and map functionality. I am also using Newtonsoft.Json to deserialize the response from OpenSky.
 
 
 ## Using this project:
@@ -34,7 +34,7 @@ This is the DataAccess Layer class that interacts with OpenSky's network. This c
 This method gets all flights from above Windsor Ontario. IF you don't want to see flights above Windsor Ontario, you will need to get the "bounding box" information for the area and modify the string url variable accordingly. This pulls data anonymously from OpenSky. No authentication is necessary. If you are feeding data to OpenSky and would like to access your own Data, this is where you'd modify the URL. Authentication will be necessary, but OpenSky's documentation will walk you through that.
 
 #### CreateFlightStates(): 
-This Method converts the raw data received from GetAllFlightsAboveWindsor() into the Flight and State models so that they can be easily used on the front-end. You will notice I convert some numbers to strings, that is for the popup box when a plane is clicked on the map. 
+This Method converts the raw data received from GetAllFlightsAboveWindsor() into the Traffic and Flight models so that they can be easily used on the front-end. You will notice I convert some numbers to strings, that is for the popup box when a plane is clicked on the map. 
 
 ## Controllers
 #### HomeController: 
